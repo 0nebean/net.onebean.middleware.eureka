@@ -12,8 +12,9 @@ Introduction
 
 Documentation
 ---
+- config(以下是主从模式两台eureka的配置示例)
 eureka-master
----
+
 ```
 spring.application.name = eureka-server
 server.port = 6101
@@ -26,9 +27,9 @@ eureka.server.enable-self-preservation = false
 eureka.server.eviction-interval-timer-in-ms = 10000
 
 ```
----
+
 eureka-server
----
+
 ```
 spring.application.name = eureka-server
 server.port = 6102
@@ -42,6 +43,12 @@ eureka.server.eviction-interval-timer-in-ms = 10000
 
 
 ```
+Startup
 ---
+- clean install -P${ENV}
+- tar-zxvf ./server-fat-1.0.0-SNAPSHOT.tar.gz
+- ./server/bin/startup.sh
+- enjoy
+
 
 
