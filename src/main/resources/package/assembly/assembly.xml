@@ -19,35 +19,35 @@
         -->
         <!-- 将src/bin目录下的所有文件输出到打包后的bin目录中 -->
         <fileSet>
-            <directory>${build.outputDirectory}/bin</directory>
+            <directory>${build.outputDirectory}${file.separator}bin</directory>
             <outputDirectory>bin</outputDirectory>
             <fileMode>0755</fileMode>
         </fileSet>
 
         <!-- 指定输出target/classes中的配置文件到config目录中 -->
         <fileSet>
-            <directory>${build.outputDirectory}/config</directory>
+            <directory>${build.outputDirectory}${file.separator}config</directory>
             <outputDirectory>config</outputDirectory>
             <fileMode>0644</fileMode>
         </fileSet>
 
         <!-- 指定输出target/classes中的模板文件到templates-customer目录中 -->
         <fileSet>
-            <directory>${build.outputDirectory}/templates-customer</directory>
+            <directory>${build.outputDirectory}${file.separator}templates-customer</directory>
             <outputDirectory>templates-customer</outputDirectory>
             <fileMode>0644</fileMode>
         </fileSet>
 
         <!-- 指定输出target/classes中的配置文件到config目录中 -->
         <fileSet>
-            <directory>${build.outputDirectory}/logs</directory>
+            <directory>${build.outputDirectory}${file.separator}logs</directory>
             <outputDirectory>logs</outputDirectory>
             <fileMode>0644</fileMode>
         </fileSet>
 
         <!-- 将第三方依赖打包到lib目录中 -->
         <fileSet>
-            <directory>${build.directory}/lib</directory>
+            <directory>${build.directory}${file.separator}lib</directory>
             <outputDirectory>lib</outputDirectory>
             <fileMode>0755</fileMode>
         </fileSet>
@@ -65,7 +65,7 @@
         <!--&lt;!&ndash; 包含根目录下的文件 &ndash;&gt;-->
         <fileSet>
             <directory>${build.outputDirectory}/instructions</directory>
-            <outputDirectory>/</outputDirectory>
+            <outputDirectory>${file.separator}</outputDirectory>
             <fileMode>0644</fileMode>
             <includes>
                 <include>NOTICE</include>

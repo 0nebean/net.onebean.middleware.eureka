@@ -1,25 +1,22 @@
-package net.onebean.eureka;
+package net.onebean.spring;
 
 import com.ctrip.framework.apollo.spring.annotation.EnableApolloConfig;
+import net.onebean.core.extend.ApolloConfInitializer;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.boot.web.support.SpringBootServletInitializer;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 @EnableApolloConfig
-@SpringBootApplication
+@SpringBootApplication(exclude= {DataSourceAutoConfiguration.class})
 @EnableEurekaServer
-public class Main extends SpringBootServletInitializer {
-
-	@Override
-	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-		return builder.sources(Main.class);
-	}
+public class Main  {
 
 	public static void main(String[] args) {
+		ApolloConfInitializer.init();
 		SpringApplication.run(Main.class, args);
 	}
+
 
 }
 
