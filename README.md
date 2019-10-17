@@ -17,7 +17,7 @@ Documentation
 eureka-master
 
 ```
-spring.application.name = eureka-server
+spring.application.name = net.onebean.middleware.eureka
 server.port = 6101
 
 eureka.instance.hostname = preeureka-master.eakay.cn
@@ -34,7 +34,7 @@ logging.level.root = info
 eureka-server
 
 ```
-spring.application.name = eureka-server
+spring.application.name = net.onebean.middleware.eureka
 server.port = 6102
 
 eureka.instance.hostname = preeureka-slave.eakay.cn
@@ -47,6 +47,24 @@ eureka.server.eviction-interval-timer-in-ms = 10000
 logging.level.root = info
 
 ```
+
+- config(以下是单例eureka的配置示例)
+```
+spring.application.name = net.onebean.middleware.eureka
+server.port = 8085
+eureka.client.register-with-eureka = false
+eureka.client.fetch-registry = false
+eureka.instance.hostname = eureka.onebean.net
+eureka.instance.lease-expiration-duration-in-seconds = 20
+eureka.instance.lease-renewal-interval-in-seconds = 10
+eureka.server.enable-self-preservation = false
+eureka.server.eviction-interval-timer-in-ms = 10000
+
+#logging
+logging.level.root = info
+
+```
+
 Startup
 ---
 - clean install -P${ENV}
