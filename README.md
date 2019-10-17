@@ -26,6 +26,8 @@ eureka.instance.lease-renewal-interval-in-seconds = 10
 eureka.client.service-url.defaultZone = http://preeureka-slave.onebean.net:6102/eureka/
 eureka.server.enable-self-preservation = false
 eureka.server.eviction-interval-timer-in-ms = 10000
+#logging
+logging.level.root = info
 
 ```
 
@@ -41,7 +43,8 @@ eureka.instance.lease-renewal-interval-in-seconds =
 eureka.client.service-url.defaultZone = http://preeureka-master.onebean.net:6101/eureka/
 eureka.server.enable-self-preservation = false
 eureka.server.eviction-interval-timer-in-ms = 10000
-
+#logging
+logging.level.root = info
 
 ```
 Startup
