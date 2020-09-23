@@ -5,20 +5,14 @@
 	<parent>
 		<groupId>net.onebean</groupId>
 		<artifactId>net.onebean.dependencies</artifactId>
-		<version>1.0.0.RELEASE</version>
+		<version>1.0.0-SNAPSHOT</version>
 	</parent>
+
 	<artifactId>net.onebean.eureka</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
 	<name>eureka</name>
 	<description>eureka服务发现集群版</description>
 	<packaging>jar</packaging>
 
-	<properties>
-		<java.version>1.8</java.version>
-		<spring-cloud.version>Edgware.SR5</spring-cloud.version>
-		<spring-boot-admin.version>1.5.7</spring-boot-admin.version>
-		<core.version>1.0.3.RELEASE</core.version>
-	</properties>
 
 
 
@@ -32,22 +26,9 @@
 		<dependency>
 			<groupId>net.onebean</groupId>
 			<artifactId>net.onebean.core</artifactId>
-			<version>${core.version}</version>
 		</dependency>
 
 	</dependencies>
-
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>org.springframework.cloud</groupId>
-				<artifactId>spring-cloud-dependencies</artifactId>
-				<version>${spring-cloud.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
 
 	<build>
 		<!-- 打包后的启动jar名称 -->
